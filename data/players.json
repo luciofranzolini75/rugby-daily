@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "dataset": "Daily Rugby — Under the Lights",
   "description": "Expanded player database for Daily Rugby. Verified facts are sourced; historical values are dated; unknown fields remain null until researched.",
   "snapshot": {
@@ -13,7 +13,9 @@
     "unknownValues": "Use null for information that has not been verified; never guess age, height, weight, club, or position.",
     "capsMeaning": "Caps as stated in the UAR squad announcement published 2026-06-23; not a live-updating career total.",
     "positionGroupMeaning": "Forwards/backs grouping follows the UAR article; specific playing position is left null until verified.",
-    "status": "partial means some fields are verified while others still need research."
+    "status": "partial means some fields are verified while others still need research.",
+    "lastUpdated": "2026-10-09",
+    "profileSourceNote": "Birth date, height, weight, position, origin club, debut, Puma number and caps/points at profile-source date are historical UAR programme data; they must not be presented as live current statistics."
   },
   "players": [
     {
@@ -22,12 +24,12 @@
       "nationalTeam": "Argentina",
       "team": "Los Pumas",
       "positionGroup": "forwards",
-      "position": null,
+      "position": "Segunda línea",
       "club": null,
-      "dateOfBirth": null,
-      "age": null,
-      "heightCm": null,
-      "weightKg": null,
+      "dateOfBirth": "1991-12-05",
+      "age": 34,
+      "heightCm": 198,
+      "weightKg": 117.8,
       "capsAtSnapshot": 99,
       "snapshotDate": "2026-06-23",
       "status": "partial",
@@ -35,11 +37,15 @@
         "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
       ],
       "ageOn": "2026-10-09",
-      "originClub": null,
-      "debut": null,
-      "pumaNumber": null,
-      "capsAtProfileSource": null,
-      "profileSource": null,
+      "originClub": "La Tablada (Córdoba)",
+      "debut": {
+        "date": "2014-05-17",
+        "opponent": "Uruguay",
+        "venue": "Paysandú"
+      },
+      "pumaNumber": 807,
+      "capsAtProfileSource": 95,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2024/programa_lospumas_rch2024.pdf",
       "currentClub": null,
       "career": {
         "teams": [],
@@ -55,7 +61,10 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "needs_research"
+      "profileStatus": "verified_partial",
+      "birthplace": "Córdoba, Argentina",
+      "pointsAtProfileSource": 25,
+      "profileNote": "Biographical measurements and debut from UAR's 2024 match programme; caps and points are historical."
     },
     {
       "id": "luciano-asevedo",
@@ -186,12 +195,12 @@
       "nationalTeam": "Argentina",
       "team": "Los Pumas",
       "positionGroup": "forwards",
-      "position": null,
+      "position": "Tercera línea",
       "club": null,
-      "dateOfBirth": null,
-      "age": null,
-      "heightCm": null,
-      "weightKg": null,
+      "dateOfBirth": "1998-07-25",
+      "age": 28,
+      "heightCm": 192,
+      "weightKg": 105,
       "capsAtSnapshot": 26,
       "snapshotDate": "2026-06-23",
       "status": "partial",
@@ -199,11 +208,15 @@
         "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
       ],
       "ageOn": "2026-10-09",
-      "originClub": null,
-      "debut": null,
-      "pumaNumber": null,
-      "capsAtProfileSource": null,
-      "profileSource": null,
+      "originClub": "Champagnat",
+      "debut": {
+        "date": "2020-11-14",
+        "opponent": "Nueva Zelanda",
+        "venue": "Newcastle"
+      },
+      "pumaNumber": 867,
+      "capsAtProfileSource": 22,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
       "currentClub": null,
       "career": {
         "teams": [],
@@ -219,7 +232,10 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "needs_research"
+      "profileStatus": "verified_partial",
+      "birthplace": "Argentina",
+      "pointsAtProfileSource": 0,
+      "profileNote": "Biographical measurements and debut from UAR's 2025 match programme; caps and points are historical."
     },
     {
       "id": "marcos-kremer",
@@ -227,12 +243,12 @@
       "nationalTeam": "Argentina",
       "team": "Los Pumas",
       "positionGroup": "forwards",
-      "position": null,
+      "position": "Tercera línea",
       "club": null,
-      "dateOfBirth": null,
-      "age": null,
-      "heightCm": null,
-      "weightKg": null,
+      "dateOfBirth": "1997-07-30",
+      "age": 29,
+      "heightCm": 195,
+      "weightKg": 114,
       "capsAtSnapshot": 81,
       "snapshotDate": "2026-06-23",
       "status": "partial",
@@ -240,11 +256,14 @@
         "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
       ],
       "ageOn": "2026-10-09",
-      "originClub": null,
-      "debut": null,
-      "pumaNumber": null,
-      "capsAtProfileSource": null,
-      "profileSource": null,
+      "originClub": "Los Espinillos (Concordia) / Atlético del Rosario",
+      "debut": {
+        "date": "2016-09-10",
+        "opponent": "Nueva Zelanda"
+      },
+      "pumaNumber": 851,
+      "capsAtProfileSource": 73,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
       "currentClub": null,
       "career": {
         "teams": [],
@@ -260,7 +279,10 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "needs_research"
+      "profileStatus": "verified_partial",
+      "birthplace": "Concordia, Entre Ríos, Argentina",
+      "pointsAtProfileSource": 15,
+      "profileNote": "Biographical measurements and debut from UAR's 2025 match programme; caps and points are historical."
     },
     {
       "id": "pablo-matera",
@@ -348,7 +370,9 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "verified_partial"
+      "profileStatus": "verified_partial",
+      "birthplace": "Argentina",
+      "profileNote": "Biographical measurements and debut from UAR's 2025 match programme; caps and points are historical."
     },
     {
       "id": "julian-montoya",
@@ -392,7 +416,9 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "verified_partial"
+      "profileStatus": "verified_partial",
+      "birthplace": "Argentina",
+      "profileNote": "Biographical measurements and debut from UAR's 2025 match programme; caps and points are historical."
     },
     {
       "id": "joaquin-moro",
@@ -477,7 +503,9 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "verified_partial"
+      "profileStatus": "verified_partial",
+      "birthplace": "Argentina",
+      "profileNote": "Biographical measurements and debut from UAR's 2025 match programme; caps and points are historical."
     },
     {
       "id": "leonel-oviedo",
@@ -772,12 +800,12 @@
       "nationalTeam": "Argentina",
       "team": "Los Pumas",
       "positionGroup": "backs",
-      "position": null,
+      "position": "Apertura",
       "club": null,
-      "dateOfBirth": null,
-      "age": null,
-      "heightCm": null,
-      "weightKg": null,
+      "dateOfBirth": "1997-09-17",
+      "age": 29,
+      "heightCm": 176.5,
+      "weightKg": 84.3,
       "capsAtSnapshot": 21,
       "snapshotDate": "2026-06-23",
       "status": "partial",
@@ -785,11 +813,15 @@
         "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
       ],
       "ageOn": "2026-10-09",
-      "originClub": null,
-      "debut": null,
-      "pumaNumber": null,
-      "capsAtProfileSource": null,
-      "profileSource": null,
+      "originClub": "Tucumán Rugby Club",
+      "debut": {
+        "date": "2022-08-06",
+        "opponent": "Australia",
+        "venue": "Mendoza"
+      },
+      "pumaNumber": 885,
+      "capsAtProfileSource": 6,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2024/programa_lospumas_rch2024.pdf",
       "currentClub": null,
       "career": {
         "teams": [],
@@ -805,7 +837,10 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "needs_research"
+      "profileStatus": "verified_partial",
+      "birthplace": "Argentina",
+      "pointsAtProfileSource": 5,
+      "profileNote": "Biographical measurements and debut from UAR's 2024 match programme; caps and points are historical."
     },
     {
       "id": "simon-benitez-cruz",
@@ -1059,12 +1094,12 @@
       "nationalTeam": "Argentina",
       "team": "Los Pumas",
       "positionGroup": "backs",
-      "position": null,
+      "position": "Medio scrum",
       "club": null,
-      "dateOfBirth": null,
-      "age": null,
-      "heightCm": null,
-      "weightKg": null,
+      "dateOfBirth": "1999-03-05",
+      "age": 27,
+      "heightCm": 172,
+      "weightKg": 80.3,
       "capsAtSnapshot": 16,
       "snapshotDate": "2026-06-23",
       "status": "partial",
@@ -1072,11 +1107,15 @@
         "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
       ],
       "ageOn": "2026-10-09",
-      "originClub": null,
-      "debut": null,
-      "pumaNumber": null,
-      "capsAtProfileSource": null,
-      "profileSource": null,
+      "originClub": "Natación y Gimnasia (Tucumán)",
+      "debut": {
+        "date": "2021-09-12",
+        "opponent": "Nueva Zelanda",
+        "venue": "Gold Coast"
+      },
+      "pumaNumber": 875,
+      "capsAtProfileSource": 11,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
       "currentClub": null,
       "career": {
         "teams": [],
@@ -1092,7 +1131,10 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "needs_research"
+      "profileStatus": "verified_partial",
+      "birthplace": "Argentina",
+      "pointsAtProfileSource": 0,
+      "profileNote": "Biographical measurements and debut from UAR's 2025 match programme; caps and points are historical."
     },
     {
       "id": "rodrigo-isgro",
@@ -1100,12 +1142,12 @@
       "nationalTeam": "Argentina",
       "team": "Los Pumas",
       "positionGroup": "backs",
-      "position": null,
+      "position": "Wing",
       "club": null,
-      "dateOfBirth": null,
-      "age": null,
-      "heightCm": null,
-      "weightKg": null,
+      "dateOfBirth": "1999-03-24",
+      "age": 27,
+      "heightCm": 183,
+      "weightKg": 101.4,
       "capsAtSnapshot": 16,
       "snapshotDate": "2026-06-23",
       "status": "partial",
@@ -1113,11 +1155,14 @@
         "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
       ],
       "ageOn": "2026-10-09",
-      "originClub": null,
-      "debut": null,
-      "pumaNumber": null,
-      "capsAtProfileSource": null,
-      "profileSource": null,
+      "originClub": "Mendoza Rugby Club",
+      "debut": {
+        "date": "2023-07-15",
+        "opponent": "Australia"
+      },
+      "pumaNumber": 888,
+      "capsAtProfileSource": 9,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
       "currentClub": null,
       "career": {
         "teams": [],
@@ -1133,7 +1178,10 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "needs_research"
+      "profileStatus": "verified_partial",
+      "birthplace": "Argentina",
+      "pointsAtProfileSource": 10,
+      "profileNote": "Biographical measurements and debut from UAR's 2025 match programme; caps and points are historical."
     },
     {
       "id": "ignacio-mendy",
@@ -1177,7 +1225,9 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "verified_partial"
+      "profileStatus": "verified_partial",
+      "birthplace": "Argentina",
+      "profileNote": "Biographical measurements and debut from UAR's 2025 match programme; caps and points are historical."
     },
     {
       "id": "matias-moroni",
@@ -1262,7 +1312,9 @@
         "appearancesByCompetition": [],
         "statsAsOf": null
       },
-      "profileStatus": "verified_partial"
+      "profileStatus": "verified_partial",
+      "birthplace": "Argentina",
+      "profileNote": "Biographical measurements and debut from UAR's 2025 match programme; caps and points are historical."
     },
     {
       "id": "geronimo-prisciantelli",
