@@ -66,23 +66,23 @@ h1{font-weight:850;letter-spacing:-.055em}
 .streak-card{display:flex;align-items:center;gap:16px;margin:18px 0 14px;padding:19px 21px;border:1px solid #596a48;border-radius:17px;background:radial-gradient(ellipse at 8% 50%,#33432b 0%,#1b291d 44%,#101811 100%);box-shadow:0 12px 30px #0003;position:relative;overflow:hidden}.streak-card:after{content:"";position:absolute;right:-30px;top:-48px;width:150px;height:150px;border:1px solid #a4b38a18;border-radius:50%;box-shadow:0 0 0 18px #a4b38a08,0 0 0 38px #a4b38a05;pointer-events:none}.streak-icon{display:grid;place-items:center;flex:0 0 54px;width:54px;height:54px;border-radius:15px;background:#a4b38a18;border:1px solid #a4b38a35;font-size:29px}.streak-main{min-width:0;flex:1}.streak-label,.streak-best span{display:block;font-size:10px;font-weight:850;letter-spacing:.17em;color:#b5c59c}.streak-value{display:flex;align-items:baseline;gap:7px;margin:2px 0 1px}.streak-value strong{font-size:clamp(32px,6vw,43px);line-height:1;font-weight:900;letter-spacing:-.06em;color:#f3f5eb;font-variant-numeric:tabular-nums}.streak-value span{font-size:14px;font-weight:750;color:#d0d9c4}.streak-note{font-size:12px;color:#a9b6a3;line-height:1.4;margin-top:5px}.streak-best{position:relative;z-index:1;align-self:stretch;display:flex;flex-direction:column;justify-content:center;gap:7px;padding-left:18px;border-left:1px solid #66765370;white-space:nowrap}.streak-best strong{font-size:15px;color:#f1f3e9;font-variant-numeric:tabular-nums}@media(max-width:420px){.streak-card{gap:11px;padding:15px 13px}.streak-icon{flex-basis:43px;width:43px;height:43px;font-size:24px;border-radius:12px}.streak-best{padding-left:11px}.streak-best span{font-size:8px;letter-spacing:.1em}.streak-best strong{font-size:13px}.streak-note{font-size:11px}}
 
 /* Cinematic Daily Rugby welcome screen */
-#drSplash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;background:linear-gradient(180deg,#07100c 0%,#101b12 42%,#172719 67%,#050906 100%);isolation:isolate}
-#drSplash:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 15% 12%,#f8ffe955 0,transparent 18%),radial-gradient(ellipse at 85% 12%,#e7f7ff44 0,transparent 19%),linear-gradient(180deg,transparent 0 40%,#101c12aa 56%,#020502 100%);filter:contrast(1.12)}
-#drSplash:after{content:"";position:absolute;inset:48% -10% -8%;z-index:-1;transform:perspective(240px) rotateX(12deg);transform-origin:top;background:repeating-linear-gradient(96deg,transparent 0 17px,#9ab16d12 18px 20px),repeating-linear-gradient(0deg,#172a15 0 3px,#23391c 4px 5px);mask-image:linear-gradient(180deg,transparent,#000 16%);box-shadow:0 -30px 70px #9bbf6820}
-.dr-splash-light{position:absolute;top:8%;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,#fff 0 1px,#f4ffe9bb 2px,#d9edcb30 9px,transparent 68%);filter:drop-shadow(0 0 24px #e6ffcfaa)}
-.dr-splash-light.left{left:4%}.dr-splash-light.right{right:4%}
-.dr-splash-content{width:min(92vw,520px);padding:28px 22px 32px;text-align:center;display:flex;align-items:center;flex-direction:column;gap:15px}
-.dr-splash-kicker{font-size:10px;letter-spacing:4px;font-weight:900;color:#c1d2a8;text-transform:uppercase}
-.dr-splash-ball{width:min(67vw,285px);height:auto;filter:drop-shadow(0 24px 23px #000b);transform:rotate(-15deg);margin:5px 0 4px}
-.dr-splash-title{font-size:clamp(35px,9vw,57px);line-height:.94;letter-spacing:-2.4px;font-weight:1000;color:#f5f3e9;text-shadow:0 4px 24px #000b;margin:0}
-.dr-splash-title span{display:block;color:#b2c494}
-.dr-splash-copy{font-size:14px;line-height:1.55;color:#d0d9c8;max-width:320px;margin:0}
-#drPlayNow{margin-top:9px;width:min(100%,300px);border:1px solid #d4e2b2;border-radius:9px;padding:16px 22px;background:linear-gradient(180deg,#c0d0a0,#899c6b);color:#10180e;font-size:13px;letter-spacing:2px;font-weight:1000;box-shadow:0 10px 35px #0008;cursor:pointer}
-#drPlayNow:active{transform:scale(.98)}
-.dr-splash-foot{font-size:9px;letter-spacing:3px;color:#93a287;margin-top:4px}
+#drSplash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;background:#050806;isolation:isolate}
+#drSplash:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(3,7,5,.78) 0%,rgba(4,9,5,.35) 38%,rgba(3,8,4,.22) 61%,rgba(2,5,3,.88) 100%),url("https://images.unsplash.com/photo-1686828601235-24f8dbfde37e?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=85&w=1800") center center/cover no-repeat;transform:scale(1.015);filter:saturate(.8) contrast(1.08)}
+#drSplash:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 47%,transparent 0%,#02050324 45%,#020503aa 100%);pointer-events:none}
+.dr-splash-light{display:none}
+.dr-splash-content{width:min(92vw,520px);min-height:100svh;padding:clamp(28px,6vh,64px) 22px max(34px,env(safe-area-inset-bottom));text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:clamp(12px,2.5vh,22px)}
+.dr-splash-kicker{font-size:10px;letter-spacing:4px;font-weight:850;color:#d0d9c1;text-transform:uppercase;text-shadow:0 2px 12px #000}
+.dr-splash-ball{width:min(43vw,168px);height:auto;filter:drop-shadow(0 12px 18px #000d);transform:none;margin:0;object-fit:contain}
+.dr-splash-title{font-size:clamp(34px,8.5vw,55px);line-height:.96;letter-spacing:-2px;font-weight:950;color:#f5f3e9;text-shadow:0 4px 24px #000c;margin:0}
+.dr-splash-title span{display:block;color:#b3c58f}
+.dr-splash-copy{font-size:14px;line-height:1.55;color:#e0e5d8;max-width:320px;margin:0;text-shadow:0 2px 10px #000}
+#drPlayNow{margin-top:clamp(8px,2vh,20px);width:min(100%,320px);border:1px solid #bdcc91;border-radius:999px;padding:16px 22px;background:rgba(13,22,12,.76);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#f5f4e9;font-size:12px;letter-spacing:2.8px;font-weight:900;box-shadow:0 8px 30px #0008,inset 0 0 18px #a7c17b0c;cursor:pointer;transition:background .2s,transform .2s}
+#drPlayNow:hover{background:rgba(89,109,59,.82)}#drPlayNow:active{transform:scale(.98)}
+.dr-splash-foot{font-size:9px;letter-spacing:3px;color:#d0d9c1;margin-top:2px;text-shadow:0 2px 10px #000}
 body.dr-splash-open{overflow:hidden}
 #drSplash.dr-splash-out{opacity:0;transition:opacity .35s ease;pointer-events:none}
-@media(min-width:700px){.dr-splash-content{padding:24px}.dr-splash-ball{width:225px}}
+@media(min-width:700px){.dr-splash-content{padding-top:35px;padding-bottom:35px}.dr-splash-ball{width:145px}}
+@media(max-height:700px){.dr-splash-content{gap:10px;padding-top:18px;padding-bottom:22px}.dr-splash-ball{width:112px}.dr-splash-title{font-size:clamp(30px,7vw,43px)}.dr-splash-copy{font-size:12px}#drPlayNow{padding:13px 20px}}
 </style>
 </head>
 
