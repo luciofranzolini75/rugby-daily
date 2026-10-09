@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#10251d">
+<meta name="theme-color" content="#080d0a">
 <meta name="description" content="Daily Rugby: adiviná jugadores, mantené tu racha y competí con amigos.">
 <meta name="application-name" content="Daily Rugby">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Daily Rugby">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icons/icon-192.png" type="image/png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/daily-rugby-real.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/daily-rugby-real.svg">
 <title>Daily Rugby — Adiviná el jugador</title>
 <style>
 :root{color-scheme:dark;--bg:#080d0a;--panel:#111a14;--panel2:#19251b;--line:#354638;--text:#f2f3ed;--muted:#a4aea2;--lime:#89996a;--green:#a2b18a;--red:#df8e82;--gold:#c9ae70;--olive:#66754f;--surface:#0d140f}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -18%,#293527 0%,#111a13 34%,var(--bg) 72%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
 .wrap{max-width:900px;margin:0 auto;padding:22px 16px 48px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #354638;padding-bottom:18px}
-.brand{display:flex;align-items:center;gap:11px}.ball{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,#a1ae83,#65754d);color:#10160e;font-size:23px;transform:rotate(-8deg);box-shadow:0 5px 18px #0006}h1{font-size:clamp(22px,4vw,32px);margin:0;letter-spacing:-1px}.subbrand{font-size:11px;color:var(--muted);letter-spacing:2px;margin-top:3px}.date{color:var(--muted);font-size:12px;text-align:right}
+.brand{display:flex;align-items:center;gap:11px}.ball{width:52px;height:52px;flex:0 0 52px;object-fit:cover;border-radius:14px;box-shadow:0 5px 18px #0006}h1{font-size:clamp(22px,4vw,32px);margin:0;letter-spacing:-1px}.subbrand{font-size:11px;color:var(--muted);letter-spacing:2px;margin-top:3px}.date{color:var(--muted);font-size:12px;text-align:right}
 .hero{padding:28px 0 18px}.eyebrow{color:var(--lime);font-weight:800;letter-spacing:2px;font-size:11px}.hero h2{font-size:clamp(27px,5vw,43px);line-height:1.05;letter-spacing:-1.4px;margin:9px 0}.hero p{color:var(--muted);margin:0;line-height:1.5;max-width:600px}
 .tabs{display:flex;gap:8px;margin:20px 0 14px}.tab{flex:1;border:1px solid var(--line);background:#111912;color:var(--muted);border-radius:10px;padding:12px 10px;font-weight:750;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}.tab.active{background:var(--olive);color:#f6f7f0;border-color:var(--olive)}
 .card{background:linear-gradient(145deg,rgba(24,33,24,.98),rgba(14,21,15,.98));border:1px solid #354638;border-radius:16px;padding:20px;margin:12px 0;box-shadow:0 18px 42px #00000030}
@@ -69,7 +69,7 @@ h1{font-weight:850;letter-spacing:-.055em}
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brand"><div class="ball">🏉</div><div><h1>DAILY RUGBY</h1><div class="subbrand">UN JUGADOR. CADA DÍA.</div></div></div>
+    <div class="brand"><img class="ball" src="icons/daily-rugby-real.svg" alt="" aria-hidden="true"><div><h1>DAILY RUGBY</h1><div class="subbrand">UN JUGADOR. CADA DÍA.</div></div></div>
     <div class="date" id="todayLabel"></div>
   </header>
   <section class="hero">
