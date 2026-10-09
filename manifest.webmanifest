@@ -10,7 +10,7 @@
   "theme_color": "#080d0a",
   "icons": [
     {
-      "src": "icons/daily-rugby-real.svg",
+      "src": "icons/daily-rugby-under-lights.svg?v=7",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
