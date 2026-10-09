@@ -1,11 +1,11 @@
 {
-  "name": "Rugby Daily — Adiviná el jugador",
-  "short_name": "Rugby Daily",
+  "name": "Daily Rugby — Adiviná el jugador",
+  "short_name": "Daily Rugby",
   "description": "Adiviná jugadores de rugby todos los días.",
   "lang": "es-AR",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0b1712",
-  "theme_color": "#10251d"
+  "background_color": "#080d0a",
+  "theme_color": "#080d0a"
 }
