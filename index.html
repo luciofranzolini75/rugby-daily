@@ -64,9 +64,43 @@ h1{font-weight:850;letter-spacing:-.055em}
 .footer{color:#879383}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 .streak-card{display:flex;align-items:center;gap:16px;margin:18px 0 14px;padding:19px 21px;border:1px solid #596a48;border-radius:17px;background:radial-gradient(ellipse at 8% 50%,#33432b 0%,#1b291d 44%,#101811 100%);box-shadow:0 12px 30px #0003;position:relative;overflow:hidden}.streak-card:after{content:"";position:absolute;right:-30px;top:-48px;width:150px;height:150px;border:1px solid #a4b38a18;border-radius:50%;box-shadow:0 0 0 18px #a4b38a08,0 0 0 38px #a4b38a05;pointer-events:none}.streak-icon{display:grid;place-items:center;flex:0 0 54px;width:54px;height:54px;border-radius:15px;background:#a4b38a18;border:1px solid #a4b38a35;font-size:29px}.streak-main{min-width:0;flex:1}.streak-label,.streak-best span{display:block;font-size:10px;font-weight:850;letter-spacing:.17em;color:#b5c59c}.streak-value{display:flex;align-items:baseline;gap:7px;margin:2px 0 1px}.streak-value strong{font-size:clamp(32px,6vw,43px);line-height:1;font-weight:900;letter-spacing:-.06em;color:#f3f5eb;font-variant-numeric:tabular-nums}.streak-value span{font-size:14px;font-weight:750;color:#d0d9c4}.streak-note{font-size:12px;color:#a9b6a3;line-height:1.4;margin-top:5px}.streak-best{position:relative;z-index:1;align-self:stretch;display:flex;flex-direction:column;justify-content:center;gap:7px;padding-left:18px;border-left:1px solid #66765370;white-space:nowrap}.streak-best strong{font-size:15px;color:#f1f3e9;font-variant-numeric:tabular-nums}@media(max-width:420px){.streak-card{gap:11px;padding:15px 13px}.streak-icon{flex-basis:43px;width:43px;height:43px;font-size:24px;border-radius:12px}.streak-best{padding-left:11px}.streak-best span{font-size:8px;letter-spacing:.1em}.streak-best strong{font-size:13px}.streak-note{font-size:11px}}
+
+/* Cinematic Daily Rugby welcome screen */
+#drSplash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;background:linear-gradient(180deg,#07100c 0%,#101b12 42%,#172719 67%,#050906 100%);isolation:isolate}
+#drSplash:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 15% 12%,#f8ffe955 0,transparent 18%),radial-gradient(ellipse at 85% 12%,#e7f7ff44 0,transparent 19%),linear-gradient(180deg,transparent 0 40%,#101c12aa 56%,#020502 100%);filter:contrast(1.12)}
+#drSplash:after{content:"";position:absolute;inset:48% -10% -8%;z-index:-1;transform:perspective(240px) rotateX(12deg);transform-origin:top;background:repeating-linear-gradient(96deg,transparent 0 17px,#9ab16d12 18px 20px),repeating-linear-gradient(0deg,#172a15 0 3px,#23391c 4px 5px);mask-image:linear-gradient(180deg,transparent,#000 16%);box-shadow:0 -30px 70px #9bbf6820}
+.dr-splash-light{position:absolute;top:8%;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,#fff 0 1px,#f4ffe9bb 2px,#d9edcb30 9px,transparent 68%);filter:drop-shadow(0 0 24px #e6ffcfaa)}
+.dr-splash-light.left{left:4%}.dr-splash-light.right{right:4%}
+.dr-splash-content{width:min(92vw,520px);padding:28px 22px 32px;text-align:center;display:flex;align-items:center;flex-direction:column;gap:15px}
+.dr-splash-kicker{font-size:10px;letter-spacing:4px;font-weight:900;color:#c1d2a8;text-transform:uppercase}
+.dr-splash-ball{width:min(67vw,285px);height:auto;filter:drop-shadow(0 24px 23px #000b);transform:rotate(-15deg);margin:5px 0 4px}
+.dr-splash-title{font-size:clamp(35px,9vw,57px);line-height:.94;letter-spacing:-2.4px;font-weight:1000;color:#f5f3e9;text-shadow:0 4px 24px #000b;margin:0}
+.dr-splash-title span{display:block;color:#b2c494}
+.dr-splash-copy{font-size:14px;line-height:1.55;color:#d0d9c8;max-width:320px;margin:0}
+#drPlayNow{margin-top:9px;width:min(100%,300px);border:1px solid #d4e2b2;border-radius:9px;padding:16px 22px;background:linear-gradient(180deg,#c0d0a0,#899c6b);color:#10180e;font-size:13px;letter-spacing:2px;font-weight:1000;box-shadow:0 10px 35px #0008;cursor:pointer}
+#drPlayNow:active{transform:scale(.98)}
+.dr-splash-foot{font-size:9px;letter-spacing:3px;color:#93a287;margin-top:4px}
+body.dr-splash-open{overflow:hidden}
+#drSplash.dr-splash-out{opacity:0;transition:opacity .35s ease;pointer-events:none}
+@media(min-width:700px){.dr-splash-content{padding:24px}.dr-splash-ball{width:225px}}
 </style>
 </head>
+
 <body>
+<div id="drSplash" role="dialog" aria-modal="true" aria-label="Bienvenido a Daily Rugby">
+  <div class="dr-splash-light left"></div><div class="dr-splash-light right"></div>
+  <main class="dr-splash-content">
+    <div class="dr-splash-kicker">EL DESAFÍO DE RUGBY</div>
+    <img class="dr-splash-ball" src="icons/daily-rugby-real.svg" alt="Daily Rugby">
+    <h2 class="dr-splash-title">¿CONOCÉS <span>EL JUEGO?</span></h2>
+    <p class="dr-splash-copy">Leé las pistas. Pensá como un jugador. Adiviná quién es.</p>
+    <button id="drPlayNow" type="button">JUGAR AHORA&nbsp; →</button>
+    <div class="dr-splash-foot">UN JUGADOR · CADA DÍA</div>
+  </main>
+</div>
+<script>
+(()=>{const splash=document.getElementById('drSplash');const play=document.getElementById('drPlayNow');document.body.classList.add('dr-splash-open');play.addEventListener('click',()=>{splash.classList.add('dr-splash-out');document.body.classList.remove('dr-splash-open');window.setTimeout(()=>splash.remove(),380);});})();
+</script>
 <div class="wrap">
   <header class="top">
     <div class="brand"><img class="ball" src="icons/daily-rugby-real.svg" alt="" aria-hidden="true"><div><h1>DAILY RUGBY</h1><div class="subbrand">UN JUGADOR. CADA DÍA.</div></div></div>
