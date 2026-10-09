@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">Daily Rugby — Under the Lights</title>
+<desc id="desc">Cancha de rugby de noche con reflectores, postes de H y la marca Daily Rugby.</desc>
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#050a0b"/><stop offset=".52" stop-color="#101b18"/><stop offset=".73" stop-color="#273526"/><stop offset="1" stop-color="#172417"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#fff6cf" stop-opacity=".92"/><stop offset=".13" stop-color="#fff0b5" stop-opacity=".42"/><stop offset="1" stop-color="#dfedb3" stop-opacity="0"/></radialGradient>
+ <linearGradient id="pitch" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#455633"/><stop offset=".48" stop-color="#182617"/><stop offset="1" stop-color="#070c08"/></linearGradient>
+ <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffdf0"/><stop offset="1" stop-color="#c8cdb7"/></linearGradient>
+ <linearGradient id="olive" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b4c17b"/><stop offset="1" stop-color="#758548"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="13"/></filter>
+ <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+ <clipPath id="round"><rect width="512" height="512" rx="78"/></clipPath>
+</defs>
+<g clip-path="url(#round)">
+ <rect width="512" height="512" fill="#030605"/>
+ <rect width="512" height="512" fill="url(#sky)"/>
+ <ellipse cx="65" cy="93" rx="120" ry="108" fill="url(#glow)"/>
+ <ellipse cx="448" cy="93" rx="120" ry="108" fill="url(#glow)"/>
+ <path d="M0 176 Q128 117 256 165 Q390 113 512 168 L512 272 L0 272Z" fill="#080e0d"/>
+ <path d="M0 187 Q126 132 256 176 Q386 130 512 183" fill="none" stroke="#5b6951" stroke-width="5" opacity=".5"/>
+ <path d="M0 203 Q124 151 256 192 Q390 148 512 200" fill="none" stroke="#9aa57b" stroke-width="2" opacity=".38"/>
+ <g fill="#c4c9a0" opacity=".65">
+  <path d="M0 190l18-3 0 4-18 3z M28 183l10-2v4l-10 2z M52 175l12-2v4l-12 2z M78 169l10-1v4l-10 1z M105 163l12 0v4l-12 0z M134 160l9 0v4l-9 0z M161 161l9 0v4l-9 0z M193 166l10 0v4l-10 0z M223 171l10 0v4l-10 0z"/>
+  <path d="M282 169l10 0v4l-10 0z M313 164l10 0v4l-10 0z M343 159l10 0v4l-10 0z M374 158l9 0v4l-9 0z M402 162l10 1v4l-10-1z M428 168l10 2v4l-10-2z M455 176l12 2v4l-12-2z M484 186l17 3v4l-17-3z"/>
+ </g>
+ <g fill="#f8edc0" opacity=".8">
+  <circle cx="20" cy="198" r="2"/><circle cx="45" cy="187" r="2"/><circle cx="70" cy="180" r="2"/><circle cx="92" cy="173" r="2"/><circle cx="122" cy="166" r="2"/><circle cx="146" cy="165" r="2"/><circle cx="177" cy="166" r="2"/><circle cx="204" cy="171" r="2"/><circle cx="231" cy="176" r="2"/><circle cx="287" cy="174" r="2"/><circle cx="319" cy="168" r="2"/><circle cx="349" cy="164" r="2"/><circle cx="379" cy="163" r="2"/><circle cx="407" cy="168" r="2"/><circle cx="436" cy="174" r="2"/><circle cx="463" cy="183" r="2"/><circle cx="490" cy="194" r="2"/>
+ </g>
+ <g>
+  <path d="M48 83 L74 168 M32 89 L74 168 M65 77 L74 168" stroke="#e8e6bd" stroke-width="6" opacity=".12" filter="url(#blur)"/>
+  <path d="M465 83 L438 168 M480 90 L438 168 M448 76 L438 168" stroke="#e8e6bd" stroke-width="6" opacity=".12" filter="url(#blur)"/>
+  <g fill="#f9f1d5">
+   <rect x="32" y="69" width="12" height="7" rx="2" transform="rotate(28 38 72)"/><rect x="44" y="76" width="12" height="7" rx="2" transform="rotate(28 50 79)"/><rect x="56" y="83" width="12" height="7" rx="2" transform="rotate(28 62 86)"/><rect x="28" y="82" width="12" height="7" rx="2" transform="rotate(28 34 85)"/><rect x="40" y="89" width="12" height="7" rx="2" transform="rotate(28 46 92)"/><rect x="52" y="96" width="12" height="7" rx="2" transform="rotate(28 58 99)"/>
+   <rect x="468" y="69" width="12" height="7" rx="2" transform="rotate(-28 474 72)"/><rect x="456" y="76" width="12" height="7" rx="2" transform="rotate(-28 462 79)"/><rect x="444" y="83" width="12" height="7" rx="2" transform="rotate(-28 450 86)"/><rect x="472" y="82" width="12" height="7" rx="2" transform="rotate(-28 478 85)"/><rect x="460" y="89" width="12" height="7" rx="2" transform="rotate(-28 466 92)"/><rect x="448" y="96" width="12" height="7" rx="2" transform="rotate(-28 454 99)"/>
+  </g>
+ </g>
+ <path d="M0 248 Q90 221 175 240 L337 240 Q423 220 512 248 L512 294 L0 294Z" fill="#080d0b"/>
+ <path d="M0 257 Q115 236 256 256 Q396 236 512 257" fill="none" stroke="#8e9a73" stroke-width="2" opacity=".38"/>
+ <g fill="#c6c9a2" opacity=".55">
+  <circle cx="22" cy="256" r="2"/><circle cx="44" cy="252" r="1.5"/><circle cx="66" cy="248" r="1.5"/><circle cx="92" cy="247" r="1.5"/><circle cx="118" cy="245" r="1.5"/><circle cx="145" cy="245" r="1.5"/><circle cx="174" cy="249" r="1.5"/><circle cx="202" cy="252" r="1.5"/><circle cx="231" cy="256" r="1.5"/><circle cx="280" cy="256" r="1.5"/><circle cx="310" cy="252" r="1.5"/><circle cx="338" cy="248" r="1.5"/><circle cx="368" cy="245" r="1.5"/><circle cx="396" cy="245" r="1.5"/><circle cx="424" cy="248" r="1.5"/><circle cx="450" cy="252" r="1.5"/><circle cx="477" cy="256" r="1.5"/><circle cx="497" cy="259" r="1.5"/>
+ </g>
+ <path d="M0 278 L512 278 L512 512 L0 512Z" fill="url(#pitch)"/>
+ <path d="M256 276 L256 512" stroke="#dce0bd" stroke-width="2.5" opacity=".34"/>
+ <path d="M0 318 Q256 293 512 318" fill="none" stroke="#abb98a" stroke-width="2" opacity=".16"/>
+ <path d="M0 363 Q256 338 512 363" fill="none" stroke="#abb98a" stroke-width="2" opacity=".1"/>
+ <path d="M0 408 Q256 386 512 408" fill="none" stroke="#abb98a" stroke-width="2" opacity=".08"/>
+ <path d="M0 278 L512 278" stroke="#c7d7a9" stroke-width="3" opacity=".65"/>
+ <path d="M256 272 L256 330" stroke="#f5f0db" stroke-width="5" opacity=".2" filter="url(#soft)"/>
+ <path d="M256 270 L256 338" stroke="#e9ebd7" stroke-width="2" opacity=".8"/>
+ <g stroke="#f4f0dc" stroke-linecap="round" fill="none">
+  <path d="M211 270 V139 M301 270 V139 M211 205 H301" stroke="#000" stroke-width="10" opacity=".65"/>
+  <path d="M211 270 V139 M301 270 V139 M211 205 H301" stroke-width="5"/>
+  <path d="M202 270 H219 M293 270 H310" stroke-width="7"/>
+ </g>
+ <ellipse cx="256" cy="310" rx="150" ry="17" fill="#b3c57e" opacity=".12" filter="url(#blur)"/>
+ <g fill="#b8c68d" opacity=".5">
+  <path d="M15 335l3-9 2 9 2-6 3 7 1-9 3 9 2-5 3 8 2-10 3 8 2-5 2 5z"/>
+  <path d="M461 346l3-9 2 9 2-6 3 7 1-9 3 9 2-5 3 8 2-10 3 8 2-5 2 5z"/>
+ </g>
+ <rect width="512" height="512" fill="#020403" opacity=".15"/>
+ <text x="256" y="351" font-family="Arial,Helvetica,sans-serif" font-size="43" font-weight="800" letter-spacing="9" text-anchor="middle" fill="#000" opacity=".4">DAILY</text>
+ <text x="256" y="347" font-family="Arial,Helvetica,sans-serif" font-size="43" font-weight="800" letter-spacing="9" text-anchor="middle" fill="url(#cream)">DAILY</text>
+ <text x="256" y="414" font-family="Arial Black,Impact,Arial,sans-serif" font-size="69" font-weight="900" letter-spacing="1" text-anchor="middle" fill="#000" opacity=".5">RUGBY</text>
+ <text x="256" y="409" font-family="Arial Black,Impact,Arial,sans-serif" font-size="69" font-weight="900" letter-spacing="1" text-anchor="middle" fill="url(#olive)" stroke="#6f7b45" stroke-width=".7">RUGBY</text>
+ <path d="M166 434 L351 430 L334 436 L365 433 L319 440 L182 440 L199 435Z" fill="#899b54" opacity=".95"/>
+ <path d="M0 0 H512 V512 H0Z" fill="none" stroke="#d7e0bb" stroke-opacity=".08" stroke-width="3"/>
+</g>
+</svg>
