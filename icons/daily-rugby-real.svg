@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop stop-color="#24331e"/><stop offset=".5" stop-color="#10170e"/><stop offset="1" stop-color="#050806"/></linearGradient>
+ <radialGradient id="light" cx="22%" cy="70%" r="78%"><stop stop-color="#52643a" stop-opacity=".75"/><stop offset="1" stop-color="#0a100a" stop-opacity="0"/></radialGradient>
+ <linearGradient id="leather" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#b2b49a"/><stop offset=".28" stop-color="#42483a"/><stop offset=".62" stop-color="#161c15"/><stop offset="1" stop-color="#090d09"/></linearGradient>
+ <linearGradient id="cream" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffef0"/><stop offset="1" stop-color="#aeb99a"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
+ <pattern id="grain" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r="1" fill="#d5ddc3" opacity=".12"/><circle cx="11" cy="10" r=".8" fill="#d5ddc3" opacity=".09"/></pattern>
+</defs>
+<rect width="512" height="512" rx="86" fill="url(#bg)"/><rect width="512" height="512" rx="86" fill="url(#light)"/>
+<path d="M0 340Q100 290 180 350T340 335T512 330V512H0Z" fill="#202b18" opacity=".8"/>
+<g stroke="#657747" stroke-width="2" opacity=".45"><path d="M15 408l22-42 2 49 24-61 4 61 23-43 4 48 23-37 5 44M295 420l18-50 3 52 21-61 5 64 19-44 6 45 22-57 5 56M408 415l19-48 4 51 20-36 4 44 22-50 5 50"/></g>
+<ellipse cx="205" cy="220" rx="165" ry="98" transform="rotate(-29 205 220)" fill="#000" opacity=".65" filter="url(#shadow)"/>
+<g transform="rotate(-29 207 212)">
+ <ellipse cx="207" cy="212" rx="160" ry="91" fill="url(#leather)" stroke="#8d9872" stroke-width="5"/>
+ <path d="M58 202Q207 145 356 202" fill="none" stroke="#d8ddc3" stroke-width="5" opacity=".72"/>
+ <path d="M60 224Q207 280 354 224" fill="none" stroke="#0b100b" stroke-width="13"/>
+ <path d="M69 211Q207 244 345 211" fill="none" stroke="#6b794b" stroke-width="5" opacity=".8"/>
+ <path d="M207 133Q179 212 207 291" fill="none" stroke="#e4e6d4" stroke-width="5" opacity=".85"/>
+ <path d="M192 183h30M188 198h38M187 213h40M190 228h34M195 243h24" stroke="#111710" stroke-width="8" stroke-linecap="round"/>
+ <path d="M192 183h30M188 198h38M187 213h40M190 228h34M195 243h24" stroke="#b9c39e" stroke-width="2.5" stroke-linecap="round"/>
+ <ellipse cx="207" cy="212" rx="160" ry="91" fill="url(#grain)"/>
+</g>
+<path d="M46 375L466 375" stroke="#8a9b61" stroke-width="3" opacity=".9"/>
+<text x="256" y="426" fill="url(#cream)" font-family="Arial,Helvetica,sans-serif" font-size="51" font-weight="900" font-style="italic" letter-spacing="-2" text-anchor="middle">DAILY</text>
+<text x="256" y="474" fill="#a4b66e" font-family="Arial,Helvetica,sans-serif" font-size="61" font-weight="900" font-style="italic" letter-spacing="-2" text-anchor="middle">RUGBY</text>
+</svg>
