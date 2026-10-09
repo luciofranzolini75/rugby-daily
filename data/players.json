@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "dataset": "Daily Rugby — Under the Lights",
-  "description": "Starter dataset built from an official UAR Los Pumas squad announcement. This is a dated squad snapshot, not a claim about the current squad.",
+  "description": "Expanded player database for Daily Rugby. Verified facts are sourced; historical values are dated; unknown fields remain null until researched.",
   "snapshot": {
     "team": "Los Pumas",
     "competition": "Nations Championship 2026",
@@ -16,39 +16,1423 @@
     "status": "partial means some fields are verified while others still need research."
   },
   "players": [
-    { "id": "matias-alemanno", "name": "Matías Alemanno", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 99, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "luciano-asevedo", "name": "Luciano Asevedo", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": "Tarucas", "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 0, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "francisco-coria-marchetti", "name": "Francisco Coria Marchetti", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 8, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "pedro-delgado", "name": "Pedro Delgado", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 9, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "santiago-grondona", "name": "Santiago Grondona", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 26, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "marcos-kremer", "name": "Marcos Kremer", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 81, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "pablo-matera", "name": "Pablo Matera", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 121, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "franco-molina", "name": "Franco Molina", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 19, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "julian-montoya", "name": "Julián Montoya", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 117, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "joaquin-moro", "name": "Joaquín Moro", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 3, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "joaquin-oviedo", "name": "Joaquín Oviedo", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 22, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "leonel-oviedo", "name": "Leonel Oviedo", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 0, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "juan-penoucos", "name": "Juan Penoucos", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": "Pampas", "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 0, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "guido-petti", "name": "Guido Petti", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 98, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "tomas-rapetti", "name": "Tomás Rapetti", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 3, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "ignacio-ruiz", "name": "Ignacio Ruiz", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 27, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "mayco-vivas", "name": "Mayco Vivas", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 39, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "boris-wenger", "name": "Boris Wenger", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "forwards", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 5, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "tomas-albornoz", "name": "Tomás Albornoz", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 21, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "simon-benitez-cruz", "name": "Simón Benítez Cruz", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 10, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "mateo-carreras", "name": "Mateo Carreras", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 33, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "santiago-carreras", "name": "Santiago Carreras", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 64, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "lucio-cinti", "name": "Lucio Cinti", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 39, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "bautista-delguy", "name": "Bautista Delguy", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 39, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "agustin-fraga", "name": "Agustín Fraga", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": "Pampas", "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 0, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "gonzalo-garcia", "name": "Gonzalo García", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 16, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "rodrigo-isgro", "name": "Rodrigo Isgró", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 16, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "ignacio-mendy", "name": "Ignacio Mendy", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 4, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "matias-moroni", "name": "Matías Moroni", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 94, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "agustin-moyano", "name": "Agustín Moyano", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 8, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "geronimo-prisciantelli", "name": "Gerónimo Prisciantelli", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": null, "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 4, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "nicolas-roger", "name": "Nicolás Roger", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": "Dogos XV", "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 3, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "faustino-sanchez-valarolo", "name": "Faustino Sánchez Valarolo", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": "Dogos XV", "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 1, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] },
-    { "id": "mateo-soler", "name": "Mateo Soler", "nationalTeam": "Argentina", "team": "Los Pumas", "positionGroup": "backs", "position": null, "club": "Dogos XV", "dateOfBirth": null, "age": null, "heightCm": null, "weightKg": null, "capsAtSnapshot": 0, "snapshotDate": "2026-06-23", "status": "partial", "sources": ["https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"] }
-  ]
+    {
+      "id": "matias-alemanno",
+      "name": "Matías Alemanno",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 99,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "luciano-asevedo",
+      "name": "Luciano Asevedo",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": "Tarucas",
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 0,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": "Tarucas",
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "francisco-coria-marchetti",
+      "name": "Francisco Coria Marchetti",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 8,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "pedro-delgado",
+      "name": "Pedro Delgado",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 9,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "santiago-grondona",
+      "name": "Santiago Grondona",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 26,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "marcos-kremer",
+      "name": "Marcos Kremer",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 81,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "pablo-matera",
+      "name": "Pablo Matera",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": "Tercera línea",
+      "club": null,
+      "dateOfBirth": "1993-07-18",
+      "age": 33,
+      "heightCm": 192,
+      "weightKg": 108.3,
+      "capsAtSnapshot": 121,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": "Alumni",
+      "debut": {
+        "date": "2013-05-01",
+        "opponent": "Chile"
+      },
+      "pumaNumber": 801,
+      "capsAtProfileSource": 112,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "verified_partial"
+    },
+    {
+      "id": "franco-molina",
+      "name": "Franco Molina",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": "Segunda línea",
+      "club": null,
+      "dateOfBirth": "1997-08-28",
+      "age": 29,
+      "heightCm": 198,
+      "weightKg": 120,
+      "capsAtSnapshot": 19,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": "Jockey Club de Córdoba",
+      "debut": {
+        "date": "2024-07-06",
+        "opponent": "Francia"
+      },
+      "pumaNumber": 890,
+      "capsAtProfileSource": 12,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "verified_partial"
+    },
+    {
+      "id": "julian-montoya",
+      "name": "Julián Montoya",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": "Hooker",
+      "club": null,
+      "dateOfBirth": "1993-10-29",
+      "age": 32,
+      "heightCm": 183,
+      "weightKg": 111.3,
+      "capsAtSnapshot": 117,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": "Newman",
+      "debut": {
+        "date": "2014-05-17",
+        "opponent": "Uruguay"
+      },
+      "pumaNumber": 812,
+      "capsAtProfileSource": 108,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "verified_partial"
+    },
+    {
+      "id": "joaquin-moro",
+      "name": "Joaquín Moro",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 3,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "joaquin-oviedo",
+      "name": "Joaquín Oviedo",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": "Octavo",
+      "club": null,
+      "dateOfBirth": "2001-07-16",
+      "age": 25,
+      "heightCm": 190,
+      "weightKg": 112.3,
+      "capsAtSnapshot": 22,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": "Córdoba Athletic",
+      "debut": {
+        "date": "2021-09-25",
+        "opponent": "Australia"
+      },
+      "pumaNumber": 878,
+      "capsAtProfileSource": 13,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "verified_partial"
+    },
+    {
+      "id": "leonel-oviedo",
+      "name": "Leonel Oviedo",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 0,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "juan-penoucos",
+      "name": "Juan Penoucos",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": "Pampas",
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 0,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": "Pampas",
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "guido-petti",
+      "name": "Guido Petti",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 98,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "tomas-rapetti",
+      "name": "Tomás Rapetti",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 3,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "ignacio-ruiz",
+      "name": "Ignacio Ruiz",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 27,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "mayco-vivas",
+      "name": "Mayco Vivas",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 39,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "boris-wenger",
+      "name": "Boris Wenger",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "forwards",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 5,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "tomas-albornoz",
+      "name": "Tomás Albornoz",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 21,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "simon-benitez-cruz",
+      "name": "Simón Benítez Cruz",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 10,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "mateo-carreras",
+      "name": "Mateo Carreras",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 33,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "santiago-carreras",
+      "name": "Santiago Carreras",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 64,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "lucio-cinti",
+      "name": "Lucio Cinti",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 39,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "bautista-delguy",
+      "name": "Bautista Delguy",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 39,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "agustin-fraga",
+      "name": "Agustín Fraga",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": "Pampas",
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 0,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": "Pampas",
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "gonzalo-garcia",
+      "name": "Gonzalo García",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 16,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "rodrigo-isgro",
+      "name": "Rodrigo Isgró",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 16,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "ignacio-mendy",
+      "name": "Ignacio Mendy",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": "Wing",
+      "club": null,
+      "dateOfBirth": "2000-06-29",
+      "age": 26,
+      "heightCm": 189,
+      "weightKg": 89.8,
+      "capsAtSnapshot": 4,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": "Los Tilos",
+      "debut": {
+        "date": "2021-08-21",
+        "opponent": "Sudáfrica"
+      },
+      "pumaNumber": 873,
+      "capsAtProfileSource": 4,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "verified_partial"
+    },
+    {
+      "id": "matias-moroni",
+      "name": "Matías Moroni",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 94,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "agustin-moyano",
+      "name": "Agustín Moyano",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": "Medio scrum",
+      "club": null,
+      "dateOfBirth": "2003-06-12",
+      "age": 23,
+      "heightCm": 173,
+      "weightKg": 78.7,
+      "capsAtSnapshot": 8,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": "San Cirano",
+      "debut": {
+        "date": "2025-07-12",
+        "opponent": "Inglaterra"
+      },
+      "pumaNumber": 902,
+      "capsAtProfileSource": 2,
+      "profileSource": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "verified_partial"
+    },
+    {
+      "id": "geronimo-prisciantelli",
+      "name": "Gerónimo Prisciantelli",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": null,
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 4,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": null,
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "nicolas-roger",
+      "name": "Nicolás Roger",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": "Dogos XV",
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 3,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": "Dogos XV",
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "faustino-sanchez-valarolo",
+      "name": "Faustino Sánchez Valarolo",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": "Dogos XV",
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 1,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": "Dogos XV",
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    },
+    {
+      "id": "mateo-soler",
+      "name": "Mateo Soler",
+      "nationalTeam": "Argentina",
+      "team": "Los Pumas",
+      "positionGroup": "backs",
+      "position": null,
+      "club": "Dogos XV",
+      "dateOfBirth": null,
+      "age": null,
+      "heightCm": null,
+      "weightKg": null,
+      "capsAtSnapshot": 0,
+      "snapshotDate": "2026-06-23",
+      "status": "partial",
+      "sources": [
+        "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/"
+      ],
+      "ageOn": "2026-10-09",
+      "originClub": null,
+      "debut": null,
+      "pumaNumber": null,
+      "capsAtProfileSource": null,
+      "profileSource": null,
+      "currentClub": "Dogos XV",
+      "career": {
+        "teams": [],
+        "representativeHonours": [],
+        "notableAchievements": [],
+        "previousClubs": [],
+        "notes": null
+      },
+      "performance": {
+        "internationalPoints": null,
+        "tries": null,
+        "starts": null,
+        "appearancesByCompetition": [],
+        "statsAsOf": null
+      },
+      "profileStatus": "needs_research"
+    }
+  ],
+  "sources": {
+    "uarSquad2026": "https://uar.com.ar/plantel-confirmado-de-los-pumas-para-comenzar-el-nations-championship/",
+    "uarPlayerProfiles2025": "https://uar.com.ar/wp-content/uploads/2025/PROGRAMA_LOS_PUMAS_VS_ALL_BLACKS_CORDOBA.pdf",
+    "uarPlayerProfiles2024": "https://uar.com.ar/wp-content/uploads/2024/programa_lospumas_rch2024.pdf",
+    "uarPlayerDirectory": "https://uar.com.ar/plantel/"
+  }
 }
