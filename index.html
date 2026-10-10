@@ -96,6 +96,22 @@ body.dr-splash-open{overflow:hidden}
 #drSplash.dr-splash-out{opacity:0;transition:opacity .35s ease;pointer-events:none}
 @media(min-width:700px){.dr-splash-content{padding-top:35px;padding-bottom:35px}.dr-splash-ball{width:145px}}
 @media(max-height:700px){.dr-splash-content{gap:10px;padding-top:18px;padding-bottom:22px}.dr-splash-ball{width:112px}.dr-splash-title{font-size:clamp(30px,7vw,43px)}.dr-splash-copy{font-size:12px}#drPlayNow{padding:13px 20px}}
+
+/* Celebración al acertar: usa el verde oficial de Daily Rugby (--lime). */
+.correct-burst{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;pointer-events:none;animation:correctFade 1.9s ease forwards}
+.correct-burst::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,color-mix(in srgb,var(--lime) 28%,transparent),transparent 62%);animation:correctFlash .65s ease-out both}
+.correct-burst-card{position:relative;padding:22px 28px;border:1px solid var(--lime);border-radius:18px;background:linear-gradient(145deg,var(--panel2),var(--panel));box-shadow:0 0 0 1px color-mix(in srgb,var(--lime) 25%,transparent),0 0 42px color-mix(in srgb,var(--lime) 42%,transparent);text-align:center;animation:correctPop .55s cubic-bezier(.2,1.5,.4,1) both}
+.correct-burst-ball{font-size:42px;line-height:1.15;animation:correctBall .8s ease-out both}
+.correct-burst-title{margin-top:8px;color:var(--lime);font-size:clamp(22px,5vw,30px);font-weight:950;letter-spacing:.06em}
+.correct-burst-sub{margin-top:4px;color:var(--text);font-size:13px;font-weight:700}
+.correct-spark{position:absolute;width:7px;height:7px;border-radius:2px;background:var(--lime);box-shadow:0 0 12px color-mix(in srgb,var(--lime) 80%,transparent);animation:correctSpark 1.15s ease-out forwards}
+@keyframes correctFade{0%,72%{opacity:1}100%{opacity:0;visibility:hidden}}
+@keyframes correctFlash{0%{opacity:0}18%{opacity:1}100%{opacity:0}}
+@keyframes correctPop{0%{opacity:0;transform:translateY(18px) scale(.72)}70%{transform:translateY(-3px) scale(1.04)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes correctBall{0%{transform:scale(.5) rotate(-22deg)}65%{transform:scale(1.2) rotate(8deg)}100%{transform:scale(1) rotate(0)}}
+@keyframes correctSpark{0%{opacity:0;transform:translate(0,0) rotate(0) scale(.4)}15%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(180deg) scale(1)}}
+@media(prefers-reduced-motion:reduce){.correct-burst,.correct-burst::before,.correct-burst-card,.correct-burst-ball,.correct-spark{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
 </style>
 </head>
 
@@ -253,7 +269,27 @@ function switchMode(m){
 }
 
 function newLegendRound(){if(currentMode!=="legends")return;let next=answer;while(LEGENDS.length>1&&next===answer)next=LEGENDS[Math.floor(Math.random()*LEGENDS.length)];answer=next;guesses=[];finished=false;wonToday=false;clueCount=0;$("playerInput").value="";$("feedback").innerHTML="";$("attemptCount").textContent="0 / 5";$("guessBtn").disabled=false;$("playerInput").disabled=false;$("quickPicks").classList.remove("hidden");$("endCard").classList.add("hidden");fillPlayerOptions();renderHistory();renderClues();}
-function submitGuess(){if(finished)return;const value=$("playerInput").value.trim();const p=PLAYERS.find(x=>norm(x.name)===norm(value));if(!p){$("feedback").innerHTML='<div class="notice">Elegí un nombre de la lista para registrar el intento.</div>';return;}if(guesses.some(g=>g.name===p.name)){$("feedback").innerHTML='<div class="notice">Ya probaste con ese jugador. Elegí otro.</div>';return;}guesses.push(p);clueCount=Math.min(clueCount+1,answer.clues.length);$("playerInput").value="";$("feedback").innerHTML="";$("attemptCount").textContent=`${guesses.length} / 5`;renderHistory();renderClues();$("quickPicks").classList.add("hidden");if(p.name===answer.name)finish(true);else if(guesses.length>=5)finish(false);else saveDailyState();}
+
+function celebrateCorrect(){
+  const layer=document.createElement("div");
+  layer.className="correct-burst";
+  layer.setAttribute("aria-live","polite");
+  layer.innerHTML='<div class="correct-burst-card"><div class="correct-burst-ball">🏉</div><div class="correct-burst-title">¡LO ENCONTRASTE!</div><div class="correct-burst-sub">¡Try convertido!</div></div>';
+  const colors=["var(--lime)","var(--text)"];
+  for(let i=0;i<18;i++){
+    const spark=document.createElement("span");
+    spark.className="correct-spark";
+    spark.style.left=(8+Math.random()*84)+"%";
+    spark.style.top=(18+Math.random()*64)+"%";
+    spark.style.setProperty("--dx",(Math.random()*180-90)+"px");
+    spark.style.setProperty("--dy",(Math.random()*-150-20)+"px");
+    spark.style.background=colors[i%colors.length];
+    layer.appendChild(spark);
+  }
+  document.body.appendChild(layer);
+  window.setTimeout(()=>layer.remove(),2000);
+}
+function submitGuess(){if(finished)return;const value=$("playerInput").value.trim();const p=PLAYERS.find(x=>norm(x.name)===norm(value));if(!p){$("feedback").innerHTML='<div class="notice">Elegí un nombre de la lista para registrar el intento.</div>';return;}if(guesses.some(g=>g.name===p.name)){$("feedback").innerHTML='<div class="notice">Ya probaste con ese jugador. Elegí otro.</div>';return;}guesses.push(p);clueCount=Math.min(clueCount+1,answer.clues.length);$("playerInput").value="";$("feedback").innerHTML="";$("attemptCount").textContent=`${guesses.length} / 5`;renderHistory();renderClues();$("quickPicks").classList.add("hidden");if(p.name===answer.name){celebrateCorrect();finish(true);}else if(guesses.length>=5)finish(false);else saveDailyState();}
 function matchClass(a,b){if(!a||!b||a==="No verificada"||b==="No verificada")return "neutral";return norm(a)===norm(b)?"good":"bad";}
 function compareAge(a,b){if(a==null||b==null)return "neutral";if(a===b)return "good";return Math.abs(a-b)<=2?"partial":"bad";}
 function arrow(a,b){if(a==null||b==null)return "—";return a===b?String(a):`${a} ${b>a?"↑":"↓"}`;}
