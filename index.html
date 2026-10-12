@@ -17225,6 +17225,22 @@ const ALL_PLAYERS = [
     "active": false,
     "status_confidence": "club_roster_lineup_2026",
     "source": "https://entrepalosrugby.com/urba-top-14-formaciones-16-fecha/"
+  },
+  {
+    "name": "Tomás Elizalde",
+    "country": "Argentina",
+    "position": "Wing",
+    "age": null,
+    "height": null,
+    "club": "Tarucas",
+    "clues": [
+      "Integra el plantel de Tarucas para el Súper Rugby Américas 2026.",
+      "Su posición registrada es wing.",
+      "Forma parte de una de las cuatro franquicias argentinas del torneo continental."
+    ],
+    "active": false,
+    "status_confidence": "club_roster_2026",
+    "source": "https://www.americasrugbynews.com/competitions/2026-super-rugby-americas/sra-2026-tarucas/"
   }
 ];
 const ACTIVE_PLAYERS = ALL_PLAYERS.filter(p => p.active === true && ((typeof p.source === "string" && /current squad listing/i.test(p.source)) || p.gameEligible === true));
