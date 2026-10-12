@@ -19,6 +19,7 @@
 .wrap{max-width:900px;margin:0 auto;padding:22px 16px 48px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #354638;padding-bottom:18px}
 .brand{display:flex;align-items:center;gap:11px}.ball{width:52px;height:52px;flex:0 0 52px;object-fit:cover;border-radius:14px;box-shadow:0 5px 18px #0006}h1{font-size:clamp(22px,4vw,32px);margin:0;letter-spacing:-1px}.subbrand{font-size:11px;color:var(--muted);letter-spacing:2px;margin-top:3px}.date{color:var(--muted);font-size:12px;text-align:right}
 .hero{padding:28px 0 18px}.eyebrow{color:var(--lime);font-weight:800;letter-spacing:2px;font-size:11px}.hero h2{font-size:clamp(27px,5vw,43px);line-height:1.05;letter-spacing:-1.4px;margin:9px 0}.hero p{color:var(--muted);margin:0;line-height:1.5;max-width:600px}
+.club-category-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0 16px}.club-category-btn{border:1px solid var(--line);background:#0c130e;color:var(--muted);border-radius:11px;padding:13px 10px;font-weight:750;cursor:pointer;transition:background .18s,border-color .18s}.club-category-btn.active{background:var(--lime);color:#f6f7f0;border-color:var(--lime)}.club-category-btn:focus-visible{outline:2px solid var(--lime);outline-offset:2px}@media(max-width:620px){.tabs{flex-wrap:wrap}.tab{min-width:calc(50% - 4px)}.club-category-grid{grid-template-columns:1fr}}
 .tabs{display:flex;gap:8px;margin:20px 0 14px}.tab{flex:1;border:1px solid var(--line);background:#111912;color:var(--muted);border-radius:10px;padding:12px 10px;font-weight:750;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}.tab.active{background:var(--olive);color:#f6f7f0;border-color:var(--olive)}
 .card{background:linear-gradient(145deg,rgba(24,33,24,.98),rgba(14,21,15,.98));border:1px solid #354638;border-radius:16px;padding:20px;margin:12px 0;box-shadow:0 18px 42px #00000030}
 .card h3{font-size:17px;margin:0 0 7px}.hint{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 15px}
@@ -143,8 +144,21 @@ body.dr-splash-open{overflow:hidden}
   <nav class="tabs" aria-label="Modos de juego">
     <button class="tab active" id="dailyTab" onclick="switchMode('daily')">🏉 Desafío diario</button>
     <button class="tab" id="legendsTab" onclick="switchMode('legends')">⭐ Modo leyendas</button>
+    <button class="tab" id="clubsTab" onclick="openClubsMode()">🏟️ Clubes</button>
     <button class="tab" id="onlineTab" onclick="openOnlineMode()">🌐 Torneo online</button>
   </nav>
+  <section class="card hidden" id="clubsSetup">
+    <h3>🏟️ Modo Clubes</h3>
+    <p class="hint">Elegí una categoría y un club. Descubrí un jugador del plantel con pistas, en hasta cinco intentos. Este modo no modifica tu racha diaria.</p>
+    <div class="club-category-grid">
+      <button type="button" class="club-category-btn active" id="argentineClubsBtn" onclick="chooseClubCategory('argentina')">🇦🇷 Clubes argentinos</button>
+      <button type="button" class="club-category-btn" id="internationalClubsBtn" onclick="chooseClubCategory('international')">🌍 Clubes internacionales</button>
+    </div>
+    <label class="hint" for="clubSelect">Elegí el club</label>
+    <select id="clubSelect" class="field"><option value="">Primero elegí una categoría</option></select>
+    <div class="notice" id="clubPoolInfo" style="margin-top:10px">La base de datos determina qué clubes están disponibles.</div>
+    <button type="button" class="primary" id="startClubBtn" style="width:100%;margin-top:12px" onclick="startClubRound()" disabled>Jugar este club</button>
+  </section>
   <section class="card hidden" id="onlineSetup">
     <h3>🌐 Torneo online con amigos</h3>
     <p class="hint">Creá una sala y compartí el código o el enlace. Cada amigo juega desde su propio dispositivo; todos reciben el mismo jugador en cada ronda y la tabla se actualiza en vivo.</p>
@@ -182,7 +196,7 @@ body.dr-splash-open{overflow:hidden}
     <div id="clueList"></div>
     <div class="notice" id="clueStatus">Hacé tu primer intento para desbloquear la primera pista.</div>
   </section>
-  <section class="card hidden" id="endCard"><div id="endMessage"></div><button class="share" id="shareBtn" onclick="shareResult()">Compartir resultado</button><button class="share hidden" id="nextLegendBtn" onclick="newLegendRound()">Otra leyenda</button><button class="share hidden" id="nextTournamentBtn" onclick="nextTournamentTurn()">Siguiente turno</button></section>
+  <section class="card hidden" id="endCard"><div id="endMessage"></div><button class="share" id="shareBtn" onclick="shareResult()">Compartir resultado</button><button class="share hidden" id="nextLegendBtn" onclick="newLegendRound()">Otra leyenda</button><button class="share hidden" id="nextClubBtn" onclick="newClubRound()">Otro jugador del club</button><button class="share hidden" id="nextTournamentBtn" onclick="nextTournamentTurn()">Siguiente turno</button></section>
   <div class="footer">DAILY RUGBY · Desafío diario progresivo y modo leyendas.<br>La dificultad sube por etapas: estrellas (días 1–14), internacional (15–28), avanzado (29–56) y experto (desde el día 57). El modo principal usa registros de planteles consultados el 09/10/2026; la composición de los equipos cambia durante la temporada. La racha y las estadísticas se guardan en este navegador. El torneo online conecta dispositivos mediante PeerJS; requiere una URL pública y conexión a internet. El desafío diario usa la fecha UTC para que todos tengan la misma respuesta.</div>
 </div>
 <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
@@ -247,9 +261,9 @@ function updateStats(){try{const streak=Number(localStorage.getItem("rd-streak")
 function renderPlayerSuggestions(query){const box=$("quickPicks");const q=norm(query);let list;if(q){list=PLAYERS.filter(p=>norm(p.name).includes(q)&&!guesses.some(g=>g.name===p.name)).sort((a,b)=>Number(norm(b.name).startsWith(q))-Number(norm(a.name).startsWith(q))).slice(0,8);box.innerHTML=list.length?list.map(p=>`<button type="button" data-player="${esc(p.name)}">${esc(p.name)}</button>`).join(""):`<span class="suggestion-empty">No encontramos jugadores con ese nombre.</span>`;box.setAttribute("aria-label","Jugadores encontrados");return;}const featured=currentMode==="daily"?ELITE_NAMES:["Jonah Lomu","Richie McCaw","Dan Carter","Bryan Habana","Agustín Pichot","Jonny Wilkinson","Brian O'Driscoll","Felipe Contepomi"];const picks=featured.map(n=>PLAYERS.find(p=>norm(p.name)===norm(n))).filter(Boolean);const extras=PLAYERS.filter(p=>!picks.includes(p)).slice(0,Math.max(0,8-picks.length));box.innerHTML=[...picks,...extras].slice(0,8).map(p=>`<button type="button" data-player="${esc(p.name)}">${esc(p.name)}</button>`).join("");box.setAttribute("aria-label","Jugadores sugeridos");}
 function fillPlayerOptions(){$("playersList").innerHTML=PLAYERS.map(p=>`<option value="${esc(p.name)}"></option>`).join("");renderPlayerSuggestions("");const input=$("playerInput");const box=$("quickPicks");if(!input.dataset.suggestionsBound){input.addEventListener("input",()=>{if(finished)return;box.classList.remove("hidden");renderPlayerSuggestions(input.value);});box.addEventListener("click",e=>{const button=e.target.closest("button[data-player]");if(!button)return;pickPlayer(button.getAttribute("data-player"));});input.dataset.suggestionsBound="true";}} 
 function setModeUI(){
-  $("onlineSetup").classList.add("hidden");$("onlineGame").classList.add("hidden");$("onlineTab").classList.remove("active");
+  $("onlineSetup").classList.add("hidden");$("onlineGame").classList.add("hidden");$("onlineTab").classList.remove("active");$("clubsSetup").classList.add("hidden");
   const daily=currentMode==="daily", legends=currentMode==="legends";const stage=getDifficultyStage();
-  $("dailyTab").classList.toggle("active",daily);$("legendsTab").classList.toggle("active",legends);
+  $("dailyTab").classList.toggle("active",daily);$("legendsTab").classList.toggle("active",legends);$("clubsTab").classList.remove("active");$("clubsTab").setAttribute("aria-pressed","false");
   $("modeLabel").textContent=daily?"Desafío diario":"Leyendas";$("difficultyLabel").textContent=daily?stage.name:"Práctica";
   $("modeTitle").textContent=daily?"Encontrá al jugador de hoy":"Adiviná una leyenda";
   $("modeHint").textContent=daily?`${stage.description} Todos juegan contra el mismo objetivo. Tenés cinco intentos y cada intento revela una pista.`:"Modo práctica: adiviná una figura histórica del rugby. No afecta tu racha diaria.";
@@ -267,6 +281,75 @@ function switchMode(m){
   else return;
   $("playerInput").value="";$("feedback").innerHTML="";fillPlayerOptions();setModeUI();renderHistory();renderClues();if(finished)showEndCard(true);
 }
+const ARGENTINE_CLUBS = ["Pampas","Dogos XV","Tarucas"];
+const NON_CLUB_TEAMS = new Set(["All Blacks","Argentina","Japan","USA"]);
+let clubCategory = "argentina", selectedClub = "";
+function getClubPool(category, club){
+  return ALL_PLAYERS.filter(p => p.club === club && Array.isArray(p.clues) && p.clues.length >= 2 &&
+    (category === "argentina" ? ARGENTINE_CLUBS.includes(p.club) : !ARGENTINE_CLUBS.includes(p.club) && !NON_CLUB_TEAMS.has(p.club) && !/\\(histórico\\)/i.test(p.club || "")));
+}
+function getClubNames(category){
+  return [...new Set(ALL_PLAYERS.filter(p => p.club && Array.isArray(p.clues) && p.clues.length >= 2 &&
+    (category === "argentina" ? ARGENTINE_CLUBS.includes(p.club) : !ARGENTINE_CLUBS.includes(p.club) && !NON_CLUB_TEAMS.has(p.club) && !/\\(histórico\\)/i.test(p.club || ""))).map(p => p.club))].sort((a,b)=>a.localeCompare(b,"es"));
+}
+function openClubsMode(){
+  currentMode="clubs";
+  ["guessCard","comparePanel","cluesPanel","endCard","onlineGame","onlineSetup"].forEach(id=>$(id).classList.add("hidden"));
+  ["dailyTab","legendsTab","onlineTab"].forEach(id=>$(id).classList.remove("active"));
+  $("clubsTab").classList.add("active");$("clubsTab").setAttribute("aria-pressed","true");
+  $("clubsSetup").classList.remove("hidden");
+  $("modeLabel").textContent="Modo Clubes";$("difficultyLabel").textContent="Práctica";
+  $("playerInput").value="";$("feedback").innerHTML="";
+  chooseClubCategory(clubCategory);
+}
+function chooseClubCategory(category){
+  clubCategory=category==="international"?"international":"argentina";
+  $("argentineClubsBtn").classList.toggle("active",clubCategory==="argentina");
+  $("internationalClubsBtn").classList.toggle("active",clubCategory==="international");
+  $("argentineClubsBtn").setAttribute("aria-pressed",String(clubCategory==="argentina"));
+  $("internationalClubsBtn").setAttribute("aria-pressed",String(clubCategory==="international"));
+  const select=$("clubSelect"), names=getClubNames(clubCategory), prior=selectedClub;
+  const options=names.map(name=>({name:name,count:getClubPool(clubCategory,name).length}));
+  select.innerHTML='<option value="">Elegí un club…</option>'+options.map(o=>'<option value="'+esc(o.name)+'"'+(o.count<2?' disabled':'')+'>'+esc(o.name)+' · '+o.count+' jugadores'+(o.count<2?' · faltan datos':'')+'</option>').join("");
+  selectedClub=options.some(o=>o.name===prior&&o.count>=2)?prior:(options.find(o=>o.count>=2)?.name||"");
+  select.value=selectedClub;
+  select.onchange=()=>{selectedClub=select.value;updateClubPoolInfo();};
+  updateClubPoolInfo();
+}
+function updateClubPoolInfo(){
+  const names=getClubNames(clubCategory), select=$("clubSelect");
+  selectedClub=select.value||"";
+  const available=names.map(name=>({name:name,count:getClubPool(clubCategory,name).length}));
+  const playable=available.filter(x=>x.count>=2), chosen=available.find(x=>x.name===select.value);
+  $("clubPoolInfo").textContent=chosen?chosen.count+" jugadores disponibles en la base para "+chosen.name+". Se necesitan al menos 2 para que la ronda sea jugable.":
+    (clubCategory==="argentina" ? "La base actual contiene "+playable.length+" clubes argentinos jugables: "+(playable.map(x=>x.name+" ("+x.count+")").join(", ")||"ninguno")+". Los planteles se ampliarán cuando se agreguen datos verificados." :
+    playable.length+" clubes internacionales jugables. Los clubes con menos de 2 jugadores con pistas quedan deshabilitados hasta ampliar la base.");
+  $("startClubBtn").disabled=!chosen||chosen.count<2;
+}
+function startClubRound(){
+  const club=$("clubSelect").value, pool=getClubPool(clubCategory,club);
+  if(pool.length<2){updateClubPoolInfo();return;}
+  selectedClub=club;currentMode="clubs";PLAYERS=pool;answer=pool[Math.floor(Math.random()*pool.length)];
+  guesses=[];finished=false;wonToday=false;clueCount=0;
+  $("playerInput").value="";$("feedback").innerHTML="";
+  $("modeTitle").textContent="Adiviná un jugador de "+club;
+  $("modeHint").textContent="Modo Clubes · "+(clubCategory==="argentina"?"Club argentino":"Club internacional")+". Tenés cinco intentos; cada intento desbloquea una pista. No afecta tu racha diaria.";
+  ["guessCard","comparePanel","cluesPanel"].forEach(id=>$(id).classList.remove("hidden"));
+  $("endCard").classList.add("hidden");$("guessBtn").disabled=false;$("playerInput").disabled=false;
+  fillPlayerOptions();setClubModeUI();renderHistory();renderClues();
+}
+function setClubModeUI(){
+  $("clubsSetup").classList.remove("hidden");$("clubsTab").classList.add("active");
+  $("modeLabel").textContent="Modo Clubes";$("difficultyLabel").textContent=clubCategory==="argentina"?"Argentina":"Internacional";
+  $("modeTitle").textContent="Adiviná un jugador de "+selectedClub;
+  $("modeHint").textContent="Tenés cinco intentos y cada intento desbloquea una pista. Este modo no modifica tu racha diaria.";
+  $("nextClubBtn").classList.toggle("hidden",!finished||currentMode!=="clubs");
+  $("nextLegendBtn").classList.add("hidden");$("nextTournamentBtn").classList.add("hidden");$("shareBtn").classList.add("hidden");
+  $("playerInput").disabled=finished;$("guessBtn").disabled=finished;$("quickPicks").classList.toggle("hidden",finished);
+  $("attemptCount").textContent=guesses.length+" / 5";
+}
+function newClubRound(){if(currentMode!=="clubs"||!selectedClub)return;startClubRound();}
+
 
 function newLegendRound(){if(currentMode!=="legends")return;let next=answer;while(LEGENDS.length>1&&next===answer)next=LEGENDS[Math.floor(Math.random()*LEGENDS.length)];answer=next;guesses=[];finished=false;wonToday=false;clueCount=0;$("playerInput").value="";$("feedback").innerHTML="";$("attemptCount").textContent="0 / 5";$("guessBtn").disabled=false;$("playerInput").disabled=false;$("quickPicks").classList.remove("hidden");$("endCard").classList.add("hidden");fillPlayerOptions();renderHistory();renderClues();}
 
@@ -296,9 +379,9 @@ function arrow(a,b){if(a==null||b==null)return "—";return a===b?String(a):`${a
 function renderHistory(){const h=$("history");if(!guesses.length){h.innerHTML='<div class="notice">Tus intentos van a aparecer acá. ¡A jugar!</div>';return;}h.innerHTML=guesses.slice().reverse().map(p=>`<div class="guessrow"><div class="guessname">${esc(p.name)}</div><div class="guesscell ${matchClass(p.country,answer.country)}">${!p.country||p.country==="No verificada"?"—":esc(p.country)}</div><div class="guesscell ${matchClass(p.position,answer.position)}">${esc(p.position||"—")}</div><div class="guesscell ${compareAge(p.age,answer.age)}">${arrow(p.age,answer.age)}</div><div class="guesscell ${p.height==null||answer.height==null?"neutral":p.height===answer.height?"good":Math.abs(p.height-answer.height)<=5?"partial":"bad"}">${p.height!=null&&answer.height!=null?arrow(p.height,answer.height)+" cm":"—"}</div></div>`).join("");}
 function renderClues(){const list=$("clueList");if(!list)return;list.innerHTML=answer.clues.map((c,i)=>`<div class="clue ${i<clueCount?"":"locked"}"><div class="num">${i<clueCount?"✓":i+1}</div><p>${i<clueCount?esc(c):"Pista bloqueada — hacé un intento más."}</p></div>`).join("");$("clueStatus").textContent=finished?`Respuesta: ${answer.name}.`:clueCount===0?"Hacé tu primer intento para desbloquear la primera pista.":`${clueCount} de ${answer.clues.length} pistas desbloqueadas.`;}
 function recordDailyResult(won){if(currentMode!=="daily")return;try{const lastDate=localStorage.getItem("rd-last-result-date");if(lastDate===TODAY)return;let streak=Number(localStorage.getItem("rd-streak")||0);if(won){streak=(lastDate===dateYesterday()&&localStorage.getItem("rd-last-result-won")==="true")?streak+1:1;}else streak=0;localStorage.setItem("rd-streak",String(streak));localStorage.setItem("rd-best-streak",String(Math.max(streak,Number(localStorage.getItem("rd-best-streak")||0))));localStorage.setItem("rd-last-result-date",TODAY);localStorage.setItem("rd-last-result-won",String(won));localStorage.setItem("rd-wins",String(Number(localStorage.getItem("rd-wins")||0)+(won?1:0)));localStorage.setItem("rd-played",String(Number(localStorage.getItem("rd-played")||0)+1));}catch(e){}updateStats();}
-function finish(won,restoring=false){finished=true;wonToday=won;$("guessBtn").disabled=true;$("playerInput").disabled=true;$("quickPicks").classList.add("hidden");$("endCard").classList.remove("hidden");if(currentMode==="tournament"){recordTournamentTurn(won);$("shareBtn").classList.add("hidden");$("nextLegendBtn").classList.add("hidden");$("nextTournamentBtn").classList.remove("hidden");showEndCard(restoring);return;}$("shareBtn").classList.toggle("hidden",currentMode==="legends");$("nextLegendBtn").classList.toggle("hidden",currentMode!=="legends");$("nextTournamentBtn").classList.add("hidden");showEndCard(restoring);if(currentMode==="daily"){saveDailyState();if(!restoring)recordDailyResult(won);} }
+function finish(won,restoring=false){finished=true;wonToday=won;$("guessBtn").disabled=true;$("playerInput").disabled=true;$("quickPicks").classList.add("hidden");$("endCard").classList.remove("hidden");if(currentMode==="tournament"){recordTournamentTurn(won);$("shareBtn").classList.add("hidden");$("nextLegendBtn").classList.add("hidden");$("nextClubBtn").classList.add("hidden");$("nextTournamentBtn").classList.remove("hidden");showEndCard(restoring);return;}$("shareBtn").classList.toggle("hidden",currentMode!=="daily");$("nextLegendBtn").classList.toggle("hidden",currentMode!=="legends");$("nextClubBtn").classList.toggle("hidden",currentMode!=="clubs");$("nextTournamentBtn").classList.add("hidden");showEndCard(restoring);if(currentMode==="daily"){saveDailyState();if(!restoring)recordDailyResult(won);}if(currentMode==="clubs")setClubModeUI(); }
 
-function showEndCard(restoring=false){$("endCard").classList.remove("hidden");if(currentMode==="tournament"){const participant=tournament?.players?.[tournament.playerIndex]?.name||"Participante";const points=wonToday?Math.max(1,6-guesses.length):0;$("endMessage").innerHTML=wonToday?`<div class="win">¡Bien jugado, ${esc(participant)}! 🏉</div><p>Era <strong>${esc(answer.name)}</strong>. Sumás <strong>${points} puntos</strong> por resolverlo en ${guesses.length} ${guesses.length===1?"intento":"intentos"}.</p>`:`<div class="win">Se terminó el turno, ${esc(participant)}.</div><p>El jugador era <strong>${esc(answer.name)}</strong>. Esta vez sumás 0 puntos.</p>`;$("clueStatus").textContent=`Respuesta: ${answer.name}.`;$("nextTournamentBtn").textContent=tournament&&tournament.round>=tournament.rounds&&tournament.playerIndex>=tournament.players.length-1?"Ver clasificación final":"Siguiente turno";$("nextTournamentBtn").classList.remove("hidden");$("shareBtn").classList.add("hidden");$("nextLegendBtn").classList.add("hidden");return;}$("endMessage").innerHTML=wonToday?`<div class="win">¡Lo encontraste! 🏉</div><p>Era <strong>${esc(answer.name)}</strong>. Lo resolviste en ${guesses.length} ${guesses.length===1?"intento":"intentos"}.</p>`:`<div class="win">${currentMode==="legends"?"¡A seguir jugando!":"¡Mañana hay revancha!"}</div><p>${currentMode==="legends"?"La leyenda era":"El jugador de hoy era"} <strong>${esc(answer.name)}</strong>.</p>`;$("clueStatus").textContent=`Respuesta: ${answer.name}.`;$("guessBtn").disabled=true;$("playerInput").disabled=true;$("quickPicks").classList.add("hidden");$("nextLegendBtn").classList.toggle("hidden",currentMode!=="legends");$("shareBtn").classList.toggle("hidden",currentMode!=="daily");$("nextTournamentBtn").classList.add("hidden");}
+function showEndCard(restoring=false){$("endCard").classList.remove("hidden");if(currentMode==="tournament"){const participant=tournament?.players?.[tournament.playerIndex]?.name||"Participante";const points=wonToday?Math.max(1,6-guesses.length):0;$("endMessage").innerHTML=wonToday?`<div class="win">¡Bien jugado, ${esc(participant)}! 🏉</div><p>Era <strong>${esc(answer.name)}</strong>. Sumás <strong>${points} puntos</strong> por resolverlo en ${guesses.length} ${guesses.length===1?"intento":"intentos"}.</p>`:`<div class="win">Se terminó el turno, ${esc(participant)}.</div><p>El jugador era <strong>${esc(answer.name)}</strong>. Esta vez sumás 0 puntos.</p>`;$("clueStatus").textContent=`Respuesta: ${answer.name}.`;$("nextTournamentBtn").textContent=tournament&&tournament.round>=tournament.rounds&&tournament.playerIndex>=tournament.players.length-1?"Ver clasificación final":"Siguiente turno";$("nextTournamentBtn").classList.remove("hidden");$("shareBtn").classList.add("hidden");$("nextLegendBtn").classList.add("hidden");return;}$("endMessage").innerHTML=wonToday?`<div class="win">¡Lo encontraste! 🏉</div><p>Era <strong>${esc(answer.name)}</strong>. Lo resolviste en ${guesses.length} ${guesses.length===1?"intento":"intentos"}.</p>`:`<div class="win">${currentMode==="legends"?"¡A seguir jugando!":"¡Mañana hay revancha!"}</div><p>${currentMode==="legends"?"La leyenda era":"El jugador de hoy era"} <strong>${esc(answer.name)}</strong>.</p>`;$("clueStatus").textContent=`Respuesta: ${answer.name}.`;$("guessBtn").disabled=true;$("playerInput").disabled=true;$("quickPicks").classList.add("hidden");$("nextLegendBtn").classList.toggle("hidden",currentMode!=="legends");$("nextClubBtn").classList.toggle("hidden",currentMode!=="clubs");$("shareBtn").classList.toggle("hidden",currentMode!=="daily");$("nextTournamentBtn").classList.add("hidden");}
 
 function shareResult(){const squares=guesses.map(p=>p.name===answer.name?"🟩":((p.country&&answer.country&&p.country===answer.country)||(p.position&&answer.position&&p.position===answer.position)?"🟨":"⬛")).join("");const won=wonToday;const txt=`DAILY RUGBY 🏉\nDesafío ${TODAY}\n${won?"Resuelto":"No resuelto"} · ${won?guesses.length:5}/5\n${squares}\n¿Podés encontrar al jugador?`;if(navigator.share){navigator.share({title:"Daily Rugby",text:txt}).catch(()=>copyShare(txt));}else copyShare(txt);}
 function copyShare(txt){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(()=>{$("endMessage").insertAdjacentHTML("beforeend",'<div class="notice success" id="shareNotice">Resultado copiado. ¡Compartilo con tus amigos!</div>');}).catch(()=>prompt("Copiá tu resultado:",txt));}else prompt("Copiá tu resultado:",txt);}
